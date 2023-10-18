@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+:root{
+    --cor0: #ffffff;
+    --cor1: #f5f50bee;
+    --cor2: #000000;
+    
+    --fonte-titulo: 'Cinzel', serif;
+    --fonte-subtitulo: 'Akshar', sans-serif;
+    --fonte-padrao: Arial, sans-serif;
+
+    --fontsize-p-web: 1.2em;
+    --fontsize-p-mobile: 0.7em;
+
+    --fontsize-h2: 1.5em;
+
+    --fontsize-usual: 1em;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: white;
+
+}
+
+header#container{
+    height: 200px;
+    background-image: url(../img/logocompleta_mary.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+nav{
+    padding: 15px;
+    font-size: var(--fontweight-web);
+    font-weight: normal;
+    font-family: var(--fonte-padrao);
+    text-align: center;
+    background-color: var(--cor2);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.438);
+}
+
+nav > a{
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: .5s;
+}
+
+nav > a:hover{
+    background-color: rgba(255, 255, 255, 0.507);
+    padding: 8px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main{
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 10px 20px 15px 20px;
+    background-color: #ffdf00;
+    box-shadow: 0px 5px 30px rgb(0, 0, 0);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+div.txt{
+    padding-top: 10px;
+}
+
+div.list{
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+main h2{
+    text-align: center;
+    font-size: var(--fontsize-h2);
+    font-family: var(--fonte-padrao);
+    font-variant: small-caps;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.671);
+    padding-bottom: 10px;
+}
+
+main p{
+    font-size: var(--fontsize-p-web);
+    font-family: var(--fonte-padrao);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    text-align: left;
+    text-indent: 20px;
+    line-height: 1.6em;
+}
+
+main img{
+    display: block;
+    margin: auto;
+}
+
+main ul {
+    list-style-position: inside;
+    font-size: var(--fontsize-p-web);
+    font-family: var(--fonte-padrao);
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.418);
+    columns: 2;
+    font-weight: normal;
+}
+
+div.map {
+    padding: 5px;
+}
+
+div.map > iframe{
+    width: 100%;
+}
+
+aside{
+    padding: 10px;
+    margin: 10px;
+}
+
+aside p{
+    text-align: center;
+    font-weight: normal;
+}
+
+aside a{
+    font-size: var(--fontsize-p-web);
+    color: black;
+    transition-duration: .3s;
+}
+
+aside a.wpp{
+    font-weight: normal;
+    text-decoration-color: rgba(0, 0, 0, 0.486);
+    font-size: var(--fontsize-usual);
+}
+
+aside a:hover{
+    background-color: black;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-size: var(--fontsize-usual);
+    font-variant: small-caps;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.712);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: var(--fonte-padrao);
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1100px){
+    header#container{
+        height: 230px;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 1000px){
+    header#container{
+        height: 200px;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 720px){
+    header#container{
+        height: 180px;
+    }
+
+    nav{
+        font-size: var(--fontsize-usual);
+    }
+
+    main{
+        max-width: 80%;
+        font-size: var(--fontsize-usual);
+    }
+
+    footer{
+        font-size: var(--fontsize-usual);
+    }
+}
+
+@media (max-width: 600px){
+    header#container{
+        height: 130px
+    }
+
+    nav{
+        font-size: var(--fontsize-usual);
+    }
+
+    main{
+        max-width: 75vw;
+        font-size: var(--fontsize-usual);
+        padding-bottom: 10px;
+    }
+
+    main h2{
+        font-size: var(--fontsize-h2);
+    }
+
+    div.txt{
+        padding: 10px;
+    }
+
+    main ul{
+        text-align: center;
+    }
+
+    footer{
+        font-size: var(--fontsize-p-mobile);
+    }
+}
+
+@media (max-width: 505px){
+    header#container{
+        height: 120px;
+        background-size: 150px;
+    }
+
+    nav{
+        font-size: var(--fontsize-usual);
+    }
+
+    main{
+        font-size: var(--fontsize-p-mobile);
+        max-width: 80%;
+    }
+
+    main h2{
+        font-size: var(--fontsize-h2);
+    }
+
+    main ul{
+        text-align: center;
+    }
+
+    footer{
+        font-size: var(--fontsize-usual);
+    }
+}
+
+@media (max-width: 400px){
+    header#container{
+        height: 120px;
+        background-size: 150px;
+    }
+
+    nav{
+        font-size: var(--fontsize-usual);
+    }
+
+    main{
+        font-size: var(--fontsize-p-mobile);
+        max-width: 80%;
+    }
+
+    main h2{
+        font-size: var(--fontsize-h2);
+    }
+
+    div.list{
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+
+    main ul{
+        text-align: center;
+    }
+
+    footer{
+        font-size: var(--fontsize-p-mobile);
+    }
+}
