@@ -1,0 +1,46 @@
+create database mdcsite;
+use mdcsite;
+
+create table clientes(
+	id int not null auto_increment,
+    nome varchar(100) not null,
+    telefone varchar(20) not null,
+    aniversario date not null,
+    primary key(id)
+);
+
+create table servicos(
+	id int not null auto_increment,
+    nome varchar(255) not null,
+    primary key(id)
+);
+
+create table agendamentos(
+	id int not null auto_increment,
+    idCliente int not null,
+    idServico int not null,
+    agendamentoData date not null,
+    horario time not null,
+    primary key(id),
+    constraint fk_agendamento_servico foreign key(idServico) references servicos(id),
+    constraint fk_agendamento_cliente foreign key(idCliente) references clientes(id)
+);
+
+create table produtos(
+	id int not null auto_increment,
+    nome varchar(255) not null,
+    estoque int not null,
+    preco float not null,
+    primary key(id)
+);
+
+create table vendas(
+	id int not null auto_increment,
+    idCliente int not null,
+    idProduto int not null,
+    qtdVenda int not null,
+    dataVenda date not null,
+    primary key(id),
+    constraint fk_vendas_cliente foreign key(idCliente) references clientes(id),
+    constraint fk_vendas_produto foreign key(idProduto) references produtos(id)
+);
